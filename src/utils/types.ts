@@ -37,4 +37,17 @@ export type TUser = {
   name: string;
 };
 
+export interface UserState {
+  user: TUser | null;
+  loading: boolean;
+  error: string | null;
+  isAuthenticated: boolean;
+}
+
+export type TProfileFormValue = {
+  name: string;
+  email: string;
+  password: string;
+};
+
 export type TTabMode = 'bun' | 'sauce' | 'main';

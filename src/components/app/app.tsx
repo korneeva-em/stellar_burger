@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from '../../services/store/store';
 import { setSelectedIngredient } from '../../services/slices/ingredients-slice';
 import { fetchUser } from '../../services/slices/user-slice';
 import { fetchIngredients } from '../../services/slices/ingredients-slice';
-import { Preloader } from '@ui';
 
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -47,7 +46,6 @@ const App = () => {
     }
   }, [dispatch, ingredients.length]);
 
-  // меняем background на путь до родительского маршрута
   useEffect(() => {
     const handleModalRoute = async () => {
       if (isModalRoute) {
